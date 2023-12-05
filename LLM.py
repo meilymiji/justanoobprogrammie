@@ -4,7 +4,7 @@ import pandas as pd
 import spacy #part of speech
 import pythaidict #แปลเป็นไทย
 
-prompt = """Act as a teacher in elementary, secondary and high school teacher. 
+prompt = """Act as a teacher in elmentary, secondary and high school. 
             You will recieve an english article. 
             List the words that appropiate from elementary, secondary and high school students. One word should have 3 things:
             -part of speech
