@@ -7,7 +7,7 @@ user_api_key = st.sidebar.text_input("OpenAI API key", type="password")
 
 client = openai.OpenAI(api_key=user_api_key)
 
-prompt = """Act as a high school student writing a paragraph in English. You will recieve a topic that contains the topic's objective and some background information. Write a paragraph that related to the topic in JSON string. The paragraph should be at least 80 words. You can write more than one paragraph. The words should be at least 8 words."""
+prompt = """Act as a high school student writing a paragraph in English. You will recieve a topic that contains the topic's objective and some background information. Write a paragraph that related to the topic. The paragraph should be at least 80 words. You can write more than one paragraph. The words should be at least 8 words."""
 
 st.title('Your Junior Writer')
 st.markdown('Input the topic. \n Do not forget to put an objective and some background information in the topic :)')
@@ -23,7 +23,8 @@ if st.button('Submit'):
         model="gpt-3.5-turbo",
         messages=messages_so_far
     )
-    st.markdown('**AI response:**')
+    st.markdown('**Paragraph:**')
     paragraph = response.choices[0].message.content
 
     st.write(paragraph)
+    st.write("**Please do not copy the paragraph all, English is not that hard. Keep going:)**")
