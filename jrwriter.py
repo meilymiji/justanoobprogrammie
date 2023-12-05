@@ -1,9 +1,9 @@
 import streamlit as st
-import openai_secret_manager
+import openai
 import json
 import pandas as pd
 
-user_api_key = openai_secret_manager.get_secret("openAI API key")
+user_api_key = st.sidebar.text_input("OpenAI API key", type="password")
 
 client = openai.OpenAI(api_key=user_api_key)
 
