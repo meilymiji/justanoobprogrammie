@@ -1,9 +1,9 @@
 import streamlit as st
-import openai
+import openai_secret_manager
 import json
 import pandas as pd
 
-user_api_key = st.sidebar.text_input("OpenAI API key", type="password")
+user_api_key = openai_secret_manager.get_secret("openAI API key")
 
 client = openai.OpenAI(api_key=user_api_key)
 
@@ -12,7 +12,7 @@ prompt = """Act as a high school student writing a paragraph in English. You wil
 st.title('Your Junior Writer')
 st.markdown('Input the topic. \n Do not forget to put an objective and some background information in the topic :)')
 
-user_input = st.text_input('Enter an objective and some background information')
+user_input = st.text_area('Enter an objective and some background information')
 
 if st.button('Submit'):
     messages_so_far = [
@@ -26,9 +26,4 @@ if st.button('Submit'):
     st.markdown('**AI response:**')
     paragraph = response.choices[0].message.content
 
-    sd = json.loads(paragraph)
-
-    print (sd)
-    para_df = pd.DataFrame.from_dict(sd)
-    print(para_df)
-    st.table(para_df)
+    st.write(paragraph)
