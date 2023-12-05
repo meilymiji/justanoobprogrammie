@@ -27,4 +27,5 @@ if st.button('Submit'):
     paragraph = response.choices[0].message.content
 
     st.write(paragraph)
+    #หาlist คำศัพท์ต่อ
     st.write("**Please do not copy the paragraph all, English is not that hard. Keep going:)**")
