@@ -2,7 +2,7 @@ import streamlit as st
 import nltk
 import pandas as pd
 import spacy #part of speech
-from googletrans import Translator
+import pythaidict #แปลเป็นไทย
 
 prompt = """Act as a teacher in elementary, secondary and high school teacher. 
             You will recieve an english article. 
@@ -18,7 +18,7 @@ st.markdown("Input the article that you interasted in the box below. \n\
 
 user_input = st.text_area ("Enter you intersting article here")
 
-#เอา user_input ไปตัดเป็นคำๆ แล้วเอาคำมาแมทช์กับลิสต์คำศัพท์ระดับประภม มัธยมต้นปลาย แล้วสร้่างใส่ในดิกที่มีvalueเป็นtuple ประกอบด้วย ชนิดของคำ คำแปล ตัวอย่างประโยคการใช้ (หา library ลิสต์คำศัพท์ คำแปลไทย ตัวอย่างประโยค
-
-if st.button("Submit"):
-    return output
+def extract_word(user_input):
+    pass
+#if st.button("Submit"):
+    #return output
