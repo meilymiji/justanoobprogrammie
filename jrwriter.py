@@ -12,8 +12,8 @@ prompt1 = """Act as a high school student writing a paragraph in English. You wi
 st.title('Your Junior Writer')
 st.markdown('Input the topic. \n Do not forget to put an objective and some background information in the topic :)')
 
-user_input = st.text_area('Enter an objective and some background information')
-
+user_input = st.text_area("Enter an objective and some background information")
+#ไม่อยู่ในกล่องข้อความ
 if st.button('Submit'):
     messages_so_far = [
         {"role": "system", "content": prompt1},
