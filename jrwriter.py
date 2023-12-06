@@ -43,9 +43,9 @@ if st.button('Submit'):
     st.markdown('**Vocabulary List:**')
     vocab_dict = response2.choices[0].message.content
     sd = json.loads(vocab_dict)
-    print(sd)
+    st.write(sd)
+
     vocab_df = pd.DataFrame.from_dict(sd)
-    print(vocab_df)
-    st.table(vocab_df)
+    st.write(vocab_df)
 
     st.write("**Please do not copy the paragraph all, English is not that hard. Keep going:)**")
