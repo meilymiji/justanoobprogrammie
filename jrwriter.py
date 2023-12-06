@@ -47,4 +47,4 @@ if st.button('Submit'):
     vocab_df = pd.DataFrame.from_dict(sd)
     st.write(vocab_df)
 
-    st.write("**Please do not copy the paragraph all, English is not that hard. Keep going:)**")
+    st.write("**Please do not copy all of the paragraph, try to write it by yourself first. You can do it:)**")
