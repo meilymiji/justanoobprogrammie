@@ -37,7 +37,7 @@ if st.button('Submit'):
         messages=messages_so_far
     )
 
-    st.markdown('**Paragraph:**')
+    st.write('**Paragraph:**')
     st.write(paragraph)
 
     st.markdown('**Vocabulary List:**')
