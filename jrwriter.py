@@ -43,7 +43,6 @@ if st.button('Submit'):
     st.markdown('**Vocabulary List:**')
     vocab_dict = response2.choices[0].message.content
     sd = json.loads(vocab_dict)
-    st.write(sd)
 
     vocab_df = pd.DataFrame.from_dict(sd)
     st.write(vocab_df)
