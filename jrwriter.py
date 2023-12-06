@@ -45,6 +45,6 @@ if st.button('Submit'):
     sd = json.loads(vocab_dict)
 
     vocab_df = pd.DataFrame.from_dict(sd)
-    st.table(vocab_df)
+    st.write(vocab_df)
 
     st.write("**Please do not copy the paragraph all, English is not that hard. Keep going:)**")
